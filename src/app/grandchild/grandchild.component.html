@@ -8,9 +8,14 @@
   
 <ul>
     <li *ngFor="let x of allLearners; index as me" (click)="callMe(me)"> 
-      {{ x.id }}  {{ x.name }}
+      {{ x.id }}  {{ x.name  | uppercase }}
     </li>
     
   </ul>
+  <br>
+  {{ birthday | date:"longDate" | uppercase }}
+  <br>
+
+  {{ amount | currency:'INR' }}
 
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-grandchild',
   templateUrl: './grandchild.component.html',
@@ -9,6 +10,8 @@ export class GrandchildComponent implements OnInit {
 
   name = 'Prafful Daga';
   age = 25;
+  birthday = new Date(); 
+  amount = 500;
 
   allLearners = [{id:'1', name:'prasad'}, 
                   {id:'2', name:'pradeep'},
