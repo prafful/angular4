@@ -1,0 +1,18 @@
+<p>
+  modelform works!
+</p>
+
+<p>User Model Driven Form</p>
+<form class="container" [formGroup]="myForm" (ngSubmit)="doSubmission(myForm.value)">
+  <input type="text" name="fn" placeholder="First name" formControlName="firstName">
+  <input type="text" name="ln" placeholder="Last name" formControlName="lastName">  
+  <select name="hb"  formControlName="hobby">
+    <option value="dancing">Dancing</option>
+    <option value="swimming">Swimming</option>
+    <option value="driving">Driving</option>
+    <option value="gliding">Gliding</option>
+
+  </select>
+  <br>
+  <input type="submit" value="submit">
+</form>

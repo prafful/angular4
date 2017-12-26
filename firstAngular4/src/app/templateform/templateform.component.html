@@ -1,0 +1,17 @@
+<p>
+  templateform works!
+</p>
+<p>User Template Driven Form</p>
+<form class="container" #userForm="ngForm" (ngSubmit)="doSubmission(userForm.value)">
+  <input type="text" name="fn" placeholder="First name" ngModel>
+  <input type="text" name="ln" placeholder="Last name" ngModel>  
+  <select name="hb"  ngModel>
+    <option value="dancing">Dancing</option>
+    <option value="swimming">Swimming</option>
+    <option value="driving">Driving</option>
+    <option value="gliding">Gliding</option>
+
+  </select>
+  <br>
+  <input type="submit" value="submit">
+</form>

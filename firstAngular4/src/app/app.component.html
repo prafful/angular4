@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+
+
+
+  {{arr | sortNow:'dsc' }}
+
+  <br>
+  <a routerLink="/category">Category</a>
+  <a routerLink="/product">Product</a>
+  <a routerLink="/templateForm">Template Form</a>
+  <a routerLink="/modelform">Model Form</a>
+  <a routerLink="/consumeS1">Consume Service 1</a>
+  <a routerLink="/consumeS2">Consume Service 2</a>
+
+  <router-outlet></router-outlet>
+
+
+</div>
