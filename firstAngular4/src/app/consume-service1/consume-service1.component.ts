@@ -10,7 +10,7 @@ import { DataServiceService } from '../data-service.service'
 export class ConsumeService1Component implements OnInit {
 
   constructor(private ds:DataServiceService) {
-    console.log(ds.myData());
+    console.log(ds.getMyData());
     console.log(ds.newsmakers);
     ds.newsmakers.push("alien");
    }

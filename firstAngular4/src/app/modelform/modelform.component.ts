@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 
 @Component({
@@ -19,11 +19,20 @@ export class ModelformComponent implements OnInit {
 
   ngOnInit(){
     this.myForm = new FormGroup({
-      firstName: new FormControl('Prafful'),
-      lastName: new FormControl('Daga'),
-      hobby: new FormControl('driving')
+      firstName: new FormControl('', Validators.compose([
+          Validators.required, 
+          Validators.minLength(4),
+          Validators.pattern('[a-z/A-Z]')
+        ])),
+      lastName: new FormControl(''),
+      hobby: new FormControl('')
   });
 
   }
+
+ 
+
+
+
 
 }

@@ -34,3 +34,11 @@ input, select {
     color:#3f3f3f;
     height: 50px;
 }
+
+input[type='submit']:disabled {
+    background-color: #ce1919;
+}
+
+input[type='submit']:hover {
+    background-color: #15ff00;
+}

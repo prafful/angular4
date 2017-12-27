@@ -10,6 +10,7 @@ export class ConsumeService2Component implements OnInit {
 
   constructor(private ds:DataServiceService) {
     console.log(ds.newsmakers)
+    this.ds.newsmakers.push("mars");
    }
 
   ngOnInit() {

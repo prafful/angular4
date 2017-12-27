@@ -14,5 +14,5 @@
 
   </select>
   <br>
-  <input type="submit" value="submit">
+  <input type="submit" [disabled]="!myForm.valid" value="submit">
 </form>
