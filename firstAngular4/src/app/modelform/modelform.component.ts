@@ -21,7 +21,8 @@ export class ModelformComponent implements OnInit {
     this.myForm = new FormGroup({
       firstName: new FormControl('', Validators.compose([
           Validators.required, 
-          Validators.minLength(4)
+          Validators.minLength(4),
+          Validators.pattern('^[a-zA-Z]+$')
           
         ])),
       lastName: new FormControl('', this.lastNameValidator),

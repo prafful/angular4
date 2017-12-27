@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { ConsumeService1Component } from './consume-service1/consume-service1.co
 import { ConsumeService2Component } from './consume-service2/consume-service2.component';
 import { DataServiceService } from './data-service.service';
 import { HttpComponent } from './http/http.component';
+import { AnimationComponent } from './animation/animation.component';
 
 
 @NgModule({
@@ -28,13 +30,15 @@ import { HttpComponent } from './http/http.component';
     ModelformComponent,
     ConsumeService1Component,
     ConsumeService2Component,
-    HttpComponent
+    HttpComponent,
+    AnimationComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot([
       {
         path:'category',
@@ -63,6 +67,10 @@ import { HttpComponent } from './http/http.component';
       {
         path:'http',
         component:HttpComponent
+      },
+      {
+        path:'animate',
+        component:AnimationComponent
       }
     ])
   ],
