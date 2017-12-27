@@ -21,16 +21,20 @@ export class ModelformComponent implements OnInit {
     this.myForm = new FormGroup({
       firstName: new FormControl('', Validators.compose([
           Validators.required, 
-          Validators.minLength(4),
-          Validators.pattern('[a-z/A-Z]')
+          Validators.minLength(4)
+          
         ])),
-      lastName: new FormControl(''),
+      lastName: new FormControl('', this.lastNameValidator),
       hobby: new FormControl('')
   });
 
   }
 
- 
+ lastNameValidator(control){
+   if(control.value.length < 3) {
+      return {'lastName':true};
+   }
+ }
 
 
 
