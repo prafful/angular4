@@ -3,11 +3,23 @@
   {{ userInfo }}
 </p>
   Search: <input type="text" name="name" id="name" [(ngModel)]="searchName">
-<ul>
-  <li *ngFor="let user of userInfo | searchFilter:searchName" >
-    Id: {{user.id}}, Name: {{user.name | uppercase }}, Email: {{user.email }}
-  </li>
-</ul>
+
+  <br>
+<table border=1>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+    <tr *ngFor="let user of userInfo | searchFilter:searchName">
+      <td>{{user.id}}</td>
+      <td>{{user.name | uppercase }}</td>
+      <td>{{user.email }}</td>
+    </tr>
+
+</table>
+
+
 <hr>
 <ul>
   <li *ngFor="let user of observableUserInfo | async | searchFilter:searchName" >

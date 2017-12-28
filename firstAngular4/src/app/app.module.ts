@@ -19,6 +19,8 @@ import { DataServiceService } from './data-service.service';
 import { HttpComponent } from './http/http.component';
 import { AnimationComponent } from './animation/animation.component';
 import { SearchFilterPipe } from './search-filter.pipe';
+import { ParentComponent } from './parent-child/parent/parent.component';
+import { Child1Component } from './parent-child/child1/child1.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { SearchFilterPipe } from './search-filter.pipe';
     ConsumeService2Component,
     HttpComponent,
     AnimationComponent,
-    SearchFilterPipe
+    SearchFilterPipe,
+    ParentComponent,
+    Child1Component
   ],
   imports: [
     BrowserModule,
@@ -73,6 +77,11 @@ import { SearchFilterPipe } from './search-filter.pipe';
       {
         path:'animate',
         component:AnimationComponent
+      },
+      {
+        path:'parentchild',
+        component:ParentComponent
+
       }
     ])
   ],
