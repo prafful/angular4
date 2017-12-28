@@ -18,6 +18,7 @@ import { ConsumeService2Component } from './consume-service2/consume-service2.co
 import { DataServiceService } from './data-service.service';
 import { HttpComponent } from './http/http.component';
 import { AnimationComponent } from './animation/animation.component';
+import { SearchFilterPipe } from './search-filter.pipe';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { AnimationComponent } from './animation/animation.component';
     ConsumeService1Component,
     ConsumeService2Component,
     HttpComponent,
-    AnimationComponent
+    AnimationComponent,
+    SearchFilterPipe
   ],
   imports: [
     BrowserModule,

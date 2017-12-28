@@ -2,16 +2,16 @@
   http works! <br><br>
   {{ userInfo }}
 </p>
-
+  Search: <input type="text" name="name" id="name" [(ngModel)]="searchName">
 <ul>
-  <li *ngFor="let user of userInfo" >
-    Id: {{user.id}}, Name: {{user.name}}, Email: {{user.email }}
+  <li *ngFor="let user of userInfo | searchFilter:searchName" >
+    Id: {{user.id}}, Name: {{user.name | uppercase }}, Email: {{user.email }}
   </li>
 </ul>
 <hr>
 <ul>
-  <li *ngFor="let user of observableUserInfo | async" >
-    Id: {{user.id}}, Name: {{user.name}}, Email: {{user.email }}
+  <li *ngFor="let user of observableUserInfo | async | searchFilter:searchName" >
+    Id: {{user.id}}, Name: {{user.name | uppercase}}, Email: {{user.email }}
   </li>
 </ul>
 

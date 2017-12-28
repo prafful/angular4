@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataServiceService } from '../data-service.service';
+
+import { SearchFilterPipe } from '.././search-filter.pipe';
+
 import { UserInfo } from '.././user-info';
 import { Observable } from 'rxjs/Observable';
 
