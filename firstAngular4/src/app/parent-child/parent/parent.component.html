@@ -5,4 +5,4 @@
 </p>
 
 <h1>Child Component</h1>
-<app-child1 [myName]="myName"></app-child1>
+<app-child1 [myName]="myName" (sendToParent)="childClick($event)"></app-child1>

@@ -7,11 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentComponent implements OnInit {
 
-  myName = "Angular 5"
+  myName = "Elder Angular 1.x"
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  childClick(e){
+    console.log(e);
+    this.myName = e;
   }
   
 
