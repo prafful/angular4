@@ -15,14 +15,14 @@ import { trigger, state, transition, animate, style } from '@angular/animations'
         transform:'scale(3)',
         color:'brown'
       })),
-      transition('kid <=>  adult', animate('1000ms ease-in') )
+      transition('kid <=>  adult', animate('500ms ease-in') )
     ])
 
   ]
 })
 export class AnimationComponent implements OnInit {
 
-  myState:String = 'kid';
+  myState:String = 'adult';
 
   constructor() { }
 

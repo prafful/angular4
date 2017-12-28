@@ -1,3 +1,19 @@
 <p>
-  http works!
+  http works! <br><br>
+  {{ userInfo }}
 </p>
+
+<ul>
+  <li *ngFor="let user of userInfo" >
+    Id: {{user.id}}, Name: {{user.name}}, Email: {{user.email }}
+  </li>
+</ul>
+<hr>
+<ul>
+  <li *ngFor="let user of observableUserInfo | async" >
+    Id: {{user.id}}, Name: {{user.name}}, Email: {{user.email }}
+  </li>
+</ul>
+
+
+
