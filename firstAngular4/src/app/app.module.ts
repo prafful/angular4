@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms'
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { AnimationComponent } from './animation/animation.component';
 import { SearchFilterPipe } from './search-filter.pipe';
 import { ParentComponent } from './parent-child/parent/parent.component';
 import { Child1Component } from './parent-child/child1/child1.component';
+import { BootstrapComponent } from './bootstrap/bootstrap.component';
 
 
 @NgModule({
@@ -37,9 +39,11 @@ import { Child1Component } from './parent-child/child1/child1.component';
     AnimationComponent,
     SearchFilterPipe,
     ParentComponent,
-    Child1Component
+    Child1Component,
+    BootstrapComponent
   ],
   imports: [
+    NgbModule.forRoot(),
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
@@ -81,7 +85,10 @@ import { Child1Component } from './parent-child/child1/child1.component';
       {
         path:'parentchild',
         component:ParentComponent
-
+      },
+      {
+        path:'bootstrap',
+        component:BootstrapComponent
       }
     ])
   ],
